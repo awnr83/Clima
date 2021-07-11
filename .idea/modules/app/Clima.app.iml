@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$/../../../app" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="Clima" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":app" />
+        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" value="4.0.1" />
+        <option name="LAST_KNOWN_AGP_VERSION" value="4.0.1" />
+      </configuration>
+    </facet>
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="debug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />
+        <afterSyncTasks>
+          <task>generateDebugSources</task>
+        </afterSyncTasks>
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/main/res;file://$MODULE_DIR$/../../../app/src/debug/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/debug" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/androidTest/res;file://$MODULE_DIR$/../../../app/src/androidTestDebug/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/androidTest/debug" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+      </configuration>
+    </facet>
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="4" platform="JVM 1.6" allPlatforms="JVM [1.6]" useProjectSettings="false">
+        <compilerSettings>
+          <option name="additionalArguments" value="-Xallow-no-source-files" />
+        </compilerSettings>
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../../app/build/tmp/kotlin-classes/debug" />
+          <option name="classpath" value="$MODULE_DIR$/../../../app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/014cd9b40fcf2309da447c3169f45663/databinding-adapters-4.0.1-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/ceaa62335e2365094ace886619baa47b/databinding-runtime-4.0.1-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/878caf7594d8d0aeac199cbc1aa0c013/viewbinding-4.0.1-api.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/androidx.databinding/databinding-common/4.0.1/cdca8698ee545b79d656a4f1eeb103f60fad3ed1/databinding-common-4.0.1.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/072fd682cea5fcdfaa9969a581f9edcd/multidex-2.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/f11ab25f6f8d67a95b86944767258222/legacy-support-v4-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/a92eafd4adcfae6d8250f6684f83a1a8/constraintlayout-2.0.0-rc1-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/496fa06ab885854f99f25432fcae74e5/navigation-ui-ktx-2.3.5-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/0dbb290ee128c4c15bc73e13d5aa34c3/navigation-ui-2.3.5-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/2c332cbffde956d63df4935271edd200/material-1.2.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/156af1f53df7cbbac60fea7be4fc64fa/navigation-fragment-ktx-2.3.5-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/cf5dff8c99183b8cbdc3854eca863d18/fragment-ktx-1.2.4-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/d7bb2c72a1ec3f55e74fc5449366023c/navigation-runtime-ktx-2.3.5-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/d516aac4252abb3af0574ce33d39d2ab/activity-ktx-1.1.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/97f3e054520d2d9f9058e76a5e8ff37f/core-ktx-1.1.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/77a1b80214dd2ed1ae29cd711f5d0b13/media-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/2b5f8f99180ae0fd29271dc58671d37f/legacy-support-core-ui-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/df088868cfd41cd176e07fdcf93a47f3/legacy-support-core-utils-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/ec8edb0b1cf28157d7ff760083d0630c/lifecycle-extensions-2.2.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/2522c05d516117d01e9cf5dd6fbac608/appcompat-1.1.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/29d00d58bbe60148b4883c0f5bf8e32c/viewpager2-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/15a584df80efcd9137e5ea1e8db89443/navigation-fragment-2.3.5-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/7a235a7cabe8cb767a7cca9d44bfbf02/fragment-1.2.4-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/ec2820e0204bbf671a1211593cdba205/coordinatorlayout-1.1.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/ee7c04effe2c188b7137eab0303af477/recyclerview-1.1.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/38d18e2f22e67c209101e513c019f79f/transition-1.3.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/fe9ef870520f9fa74afcb53bb031ce54/appcompat-resources-1.1.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/ac11c08198f25fe97dfed01ee5207fca/vectordrawable-animated-1.1.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/e701f9aa53b9ad8eaff4ec19472f5b46/vectordrawable-1.1.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/88b67ff16598a8f7fbef7385484c114a/loader-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/991b45af086303682a9e63febac2afbd/viewpager-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/49dec171de50930da64de4d16efef11d/drawerlayout-1.1.1-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/4ff09376ad8e9ad9325bd3f590749047/slidingpanelayout-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/6bf4fa5f4a59c3c22697685b73a6a15a/customview-1.1.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/e71281a5b6d8dae680a6c91c4ec5cfc0/swiperefreshlayout-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/d2e679da621a19b18eecc6f4cdb3fa44/asynclayoutinflater-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/e6439097bbe85801acc0e0fc2290af79/navigation-runtime-2.3.5-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/02bb77a874c6d7dc701d25938614688c/activity-1.1.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/f500603bf0862395bf6441dbb503fc36/core-1.3.1-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/a73ecf5fbf184d8217f3ee33afdd108e/lifecycle-process-2.2.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/cb2a88b48162c5761e9fa6c06c76edc0/lifecycle-service-2.2.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/3ef9b4ea00e115321f633ea847b5f987/lifecycle-runtime-ktx-2.2.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/6a098f15aa2eec85b86c079af7238635/lifecycle-runtime-2.2.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/bacd5730af7842682d012691dac7d9dd/versionedparcelable-1.1.0-api.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/androidx.collection/collection-ktx/1.1.0/f807b2f366f7b75142a67d2f3c10031065b5168/collection-ktx-1.1.0.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/1f27220b47669781457de0d600849a5de0e89909/collection-1.1.0.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/15b01c7ad1cc7f1f73d0c9655042d872/cardview-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/19e58f7d3dc2f6f6833be3ea74280f2b/room-ktx-2.2.5-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/1c8d39a9920d1ebecf32e98d2b13bf51/room-runtime-2.2.5-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/8038e2d38b977f0b7cbe28f98ca1d7d2/lifecycle-livedata-2.2.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/c6b13b138d2bff7f9deb0967c652f6e6/lifecycle-viewmodel-savedstate-2.2.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/11aea88e2306911325e50a21670b8e3d/lifecycle-livedata-core-ktx-2.2.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/b0726fa65da549b5bc3daef00c062743/lifecycle-livedata-core-2.2.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/28868db428362c45799a2776ce699df3/core-runtime-2.1.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/e78717625e8617cc1a6960583c1fbbe7/savedstate-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.1.0/b3152fc64428c9354344bd89848ecddc09b6f07e/core-common-2.1.0.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.2.0/4ef09a745007778eef83b92f8f23987a8ea59496/lifecycle-common-2.2.0.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/a0805473f7609b5c8992428aeb7975e3/lifecycle-viewmodel-ktx-2.2.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/4f6dbfddf798adc7045af23251001015/lifecycle-viewmodel-2.2.0-api.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/androidx.room/room-common/2.2.5/f5e3b73a0c2ab5e276e26868e4ce3542baede207/room-common-2.2.5.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/b0a8ff367690db7364d1c8092fb5ab4e/sqlite-framework-2.0.1-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/671322c45b785c4892bf39e8990d1892/sqlite-2.0.1-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/2778d9b9bb31f58c189ef72b1e36fccd/documentfile-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/b8dd9a48ed19aff256e7d3e6ff361512/localbroadcastmanager-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/ad50a1d435b15df70a41ad5da2cd1850/print-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/ad46ad8927775142c436686e3e9c959d/interpolator-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/abe9d00ebdf267766d0a1508aaf77a05/cursoradapter-1.0.0-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/807d90261e20e2ce9ee40ac1170ebd5d/navigation-common-ktx-2.3.5-api.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/b90ad3ae936470d11b2183b33aa37896/navigation-common-2.3.5-api.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/e3a6fb2f40e3a3842e6b7472628ba4ce416ea4c8/annotation-1.1.0.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions-runtime/1.4.32/2b6e48d05eccf8f25668f49fb79181e72ebdba3a/kotlin-android-extensions-runtime-1.4.32.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.4.32/3546900a3ebff0c43f31190baf87a9220e37b7ea/kotlin-stdlib-jdk7-1.4.32.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-android/1.3.7/b6daaff7bdcf9c86ca7ab5f05d72d14dc69da25b/kotlinx-coroutines-android-1.3.7.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.3.7/8e2eb78158638b33793d204ffef0b65c4a578e1c/kotlinx-coroutines-core-1.3.7.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.4.32/461367948840adbb0839c51d91ed74ef4a9ccb52/kotlin-stdlib-1.4.32.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.4.32/ef50bfa2c0491a11dcc35d9822edbfd6170e1ea2/kotlin-stdlib-common-1.4.32.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar;C:/Users/Rojas/.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout-solver/2.0.0-rc1/8e963a1952dd86ecccb463c0f8396246e51b2a92/constraintlayout-solver-2.0.0-rc1.jar;C:/Users/Rojas/.gradle/caches/transforms-2/files-2.1/eb42c644cc4757d0266f496d1774eec2/annotation-experimental-1.0.0-api.jar;C:/Users/Rojas/AppData/Local/Android/Sdk/platforms/android-30/android.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="app_debug" />
+          <option name="jvmTarget" value="1.6" />
+          <option name="languageVersion" value="1.4" />
+          <option name="apiVersion" value="1.4" />
+          <option name="pluginOptions">
+            <array>
+              <option value="plugin:org.jetbrains.kotlin.android:experimental=false" />
+              <option value="plugin:org.jetbrains.kotlin.android:enabled=true" />
+              <option value="plugin:org.jetbrains.kotlin.android:defaultCacheImplementation=hashMap" />
+            </array>
+          </option>
+          <option name="pluginClasspaths">
+            <array>
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20181211/216c2e14b070f334479d800987affe4054cd563f/trove4j-1.0.20181211.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.4.32/644a06f42aee2f320738b90e4f11120f52f52333/kotlin-android-extensions-1.4.32.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.4.32/b4fc9be460ca88eecea2303e142ce2920bd14775/kotlin-compiler-embeddable-1.4.32.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.4.32/b40c5de5adea26ebb4e5fc36945c482ac20acee2/kotlin-daemon-embeddable-1.4.32.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.4.32/ce852b166d97f0f1991b5130c2bb02e2ef6c554e/kotlin-reflect-1.4.32.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.4.32/bac50b0748be017dbc13fc1cb7231b1c9da0e106/kotlin-script-runtime-1.4.32.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.4.32/ef50bfa2c0491a11dcc35d9822edbfd6170e1ea2/kotlin-stdlib-common-1.4.32.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.4.32/461367948840adbb0839c51d91ed74ef4a9ccb52/kotlin-stdlib-1.4.32.jar" />
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
+            </array>
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+    <output url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/debug/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/debugUnitTest/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../app">
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/androidTest/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/res" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/kaptKotlin/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/kapt/debug" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/kaptKotlin/debugAndroidTest" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/kaptKotlin/debugUnitTest" isTestSource="true" generated="true" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../app/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../app/build" />
+    </content>
+    <orderEntry type="jdk" jdkName="Android API 30 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12" level="project" />
+    <orderEntry type="module-library">
+      <library name="Gradle: kaptGeneratedClasses">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../app/build/tmp/kapt3/classes/debugAndroidTest" />
+          <root url="file://$MODULE_DIR$/../../../app/build/tmp/kapt3/classes/debug" />
+          <root url="file://$MODULE_DIR$/../../../app/build/tmp/kapt3/classes/releaseUnitTest" />
+          <root url="file://$MODULE_DIR$/../../../app/build/tmp/kapt3/classes/release" />
+          <root url="file://$MODULE_DIR$/../../../app/build/tmp/kapt3/classes/debugUnitTest" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-integration:1.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-library:1.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: net.sf.kxml:kxml2:2.3.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup:javawriter:2.1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.findbugs:jsr305:2.0.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.ext:junit:1.1.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-core:3.2.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.multidex:multidex-instrumentation:2.0.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:runner:1.2.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:core:1.2.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:monitor:1.2.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-idling-resource:3.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.databinding:databinding-common:4.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.collection:collection-ktx:1.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.collection:collection:1.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.arch.core:core-common:2.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common:2.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.room:room-common:2.2.5" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.annotation:annotation:1.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.4.32" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.32" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.4.32" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.4.32" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout-solver:2.0.0-rc1" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.databinding:databinding-adapters:4.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.databinding:databinding-runtime:4.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.databinding:viewbinding:4.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.multidex:multidex:2.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-v4:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout:2.0.0-rc1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.navigation:navigation-ui-ktx:2.3.5@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.navigation:navigation-ui:2.3.5@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.material:material:1.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.navigation:navigation-fragment-ktx:2.3.5@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.fragment:fragment-ktx:1.2.4@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.navigation:navigation-runtime-ktx:2.3.5@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.activity:activity-ktx:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.core:core-ktx:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.media:media:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-core-ui:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-core-utils:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-extensions:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.viewpager2:viewpager2:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.navigation:navigation-fragment:2.3.5@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.fragment:fragment:1.2.4@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.coordinatorlayout:coordinatorlayout:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.recyclerview:recyclerview:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.transition:transition:1.3.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat-resources:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.vectordrawable:vectordrawable-animated:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.vectordrawable:vectordrawable:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.loader:loader:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.viewpager:viewpager:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.drawerlayout:drawerlayout:1.1.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.customview:customview:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.navigation:navigation-runtime:2.3.5@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.activity:activity:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.core:core:1.3.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-process:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-service:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-runtime-ktx:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-runtime:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.versionedparcelable:versionedparcelable:1.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.cardview:cardview:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.room:room-ktx:2.2.5@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.room:room-runtime:2.2.5@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.arch.core:core-runtime:2.1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.savedstate:savedstate:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.2.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.sqlite:sqlite-framework:2.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.sqlite:sqlite:2.0.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.documentfile:documentfile:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.print:print:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.interpolator:interpolator:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.cursoradapter:cursoradapter:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.navigation:navigation-common-ktx:2.3.5@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.navigation:navigation-common:2.3.5@aar" level="project" />
+    <orderEntry type="library" name="Gradle: androidx.annotation:annotation-experimental:1.0.0@aar" level="project" />
+  </component>
+</module>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/ciudadesFragment">
+
+    <fragment
+        android:id="@+id/ciudadesFragment"
+        android:name="com.example.clima.ciudades.CiudadesFragment"
+        android:label="fragment_ciudades"
+        tools:layout="@layout/fragment_ciudades" >
+        <action
+            android:id="@+id/action_ciudadesFragment_to_newCiudadFragment"
+            app:destination="@id/newCiudadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newCiudadFragment"
+        android:name="com.example.clima.newCiudad.NewCiudadFragment"
+        android:label="fragment_new_ciudad"
+        tools:layout="@layout/fragment_new_ciudad" >
+        <action
+            android:id="@+id/action_newCiudadFragment_to_ciudadesFragment"
+            app:destination="@id/ciudadesFragment" />
+    </fragment>
+</navigation>
