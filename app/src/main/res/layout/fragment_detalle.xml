@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".detalle.DetalleFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.clima.detalle.DetalleViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FDFDFD">
+
+
+        <TextView
+            android:id="@+id/tvCiudad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.nombre}"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvTemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54dp"
+            android:text="@{viewModel.tiempo.temp.toString()}"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSensacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.tiempo.feels_like.toString()}"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTemp" />
+
+        <TextView
+            android:id="@+id/tvMin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{viewModel.tiempo.temp_min.toString()}"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/tvMax"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSensacion" />
+
+        <TextView
+            android:id="@+id/tvMax"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.tiempo.temp_max.toString()}"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvMin"
+            app:layout_constraintTop_toTopOf="@+id/tvMin" />
+
+        <TextView
+            android:id="@+id/tvPressure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="@{viewModel.tiempo.pressure.toString()}"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMin" />
+
+        <TextView
+            android:id="@+id/tvHumidity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@{viewModel.tiempo.humidity.toString()}"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPressure" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

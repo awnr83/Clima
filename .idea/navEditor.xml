@@ -17,6 +17,27 @@
                             <option name="y" value="40" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_ciudadesFragment_to_newCiudadFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="detalleFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-204" />
+                            <option name="y" value="11" />
+                          </Point>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -28,6 +49,15 @@
                             <option name="x" value="267" />
                             <option name="y" value="21" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_newCiudadFragment_to_ciudadesFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

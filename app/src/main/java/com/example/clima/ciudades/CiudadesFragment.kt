@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.clima.R
 import com.example.clima.database.CiudadDatabase
@@ -33,8 +34,8 @@ class CiudadesFragment : Fragment() {
         binding.lifecycleOwner=this
 
         //se carga el RecyclerView
-        val adapter= CiudadAdapter(CiudadAdapter.CiudadListener {id->
-            Toast.makeText(context,"click en la ciudad id: $id", Toast.LENGTH_SHORT).show()
+        val adapter= CiudadAdapter(CiudadAdapter.CiudadListener {
+            findNavController().navigate(CiudadesFragmentDirections.actionCiudadesFragmentToDetalleFragment(it))
         })
         binding.listCiudades.adapter=adapter
 

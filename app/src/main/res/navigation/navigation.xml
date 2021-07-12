@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_ciudadesFragment_to_newCiudadFragment"
             app:destination="@id/newCiudadFragment" />
+        <action
+            android:id="@+id/action_ciudadesFragment_to_detalleFragment"
+            app:destination="@id/detalleFragment" />
     </fragment>
     <fragment
         android:id="@+id/newCiudadFragment"
@@ -22,5 +25,17 @@
         <action
             android:id="@+id/action_newCiudadFragment_to_ciudadesFragment"
             app:destination="@id/ciudadesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="com.example.clima.detalle.DetalleFragment"
+        android:label="fragment_detalle"
+        tools:layout="@layout/fragment_detalle" >
+        <action
+            android:id="@+id/action_detalleFragment_to_ciudadesFragment"
+            app:destination="@id/ciudadesFragment" />
+        <argument
+            android:name="nombre"
+            app:argType="string" />
     </fragment>
 </navigation>
