@@ -1,8 +1,8 @@
 package com.example.clima.network
 
+
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
@@ -21,8 +21,8 @@ private val retrofit= Retrofit.Builder()
 
 //https://api.openweathermap.org/data/2.5/weather?q=London&appid=710b9a74fd5943aff012c7e3e83be945
 interface CiudadApiService{
-    @GET(value= "weather?q=London&appid=710b9a74fd5943aff012c7e3e83be945")
-    fun getTemp(): Call<Weather>
+//    @GET(value= "weather?q=London&appid=710b9a74fd5943aff012c7e3e83be945")
+//    fun getTemp(): Call<Weather>
 
     @GET(value= "weather?q=London&appid=710b9a74fd5943aff012c7e3e83be945")
     suspend fun getTemp2(): Weather
@@ -31,7 +31,7 @@ interface CiudadApiService{
     suspend fun getWeather(
         @Query("q") cityName: String?,
         @Query("appid") ApiToken: String?
-    ): Weather //Weather
+    ): Weather
 }
 
 object CiudadApi{

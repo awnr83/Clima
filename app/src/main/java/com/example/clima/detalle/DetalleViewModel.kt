@@ -7,32 +7,53 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.clima.database.CiudadDatabaseDao
 import com.example.clima.network.CiudadApi
-import com.example.clima.network.Main
-import kotlinx.coroutines.launch
+import com.example.clima.network.Weather
+import kotlinx.coroutines.*
 import java.lang.Exception
 
 class DetalleViewModel(val nombre: String, val db: CiudadDatabaseDao): ViewModel(){
 
-    private val _ciudad= MutableLiveData<String>()
-    val ciudad: LiveData<String>
-        get()= _ciudad
+    private val jobViewModel= Job()
+    private val uiScope= CoroutineScope(Dispatchers.Main + jobViewModel)
+    override fun onCleared() {
+        super.onCleared()
+        jobViewModel.cancel()
+    }
 
-    private val _tiempo= MutableLiveData<Main>()
-    val tiempo: LiveData<Main>
-        get()= _tiempo
+    private var error: Boolean = false
 
-    fun obtenerTiempo(){
+    private val _weather= MutableLiveData<Weather>()
+    val weather: LiveData<Weather>
+        get()= _weather
+
+    private fun obtenerTiempo(){
         viewModelScope.launch {
             try {
-                _tiempo.value = CiudadApi.retrofitService.getWeather(nombre, "710b9a74fd5943aff012c7e3e83be945").main
+                _weather.value = CiudadApi
+                    .retrofitService
+                    .getWeather(nombre, "710b9a74fd5943aff012c7e3e83be945")
+                error= false
             }catch (e: Exception){
-                Log.i("alfredo","error: ${e.message.toString()}")
+                error=true
+                Log.i("alfredo","error: $nombre + ${e.message.toString()}")
             }
         }
     }
 
     init {
         obtenerTiempo()
-        _ciudad.value=nombre
     }
+
+//
+//    private fun onBuscar(){
+//        uiScope.launch {
+//            _ciudad.value= buscarDatosCiuadad()
+//            obtenerTiempo()
+//        }
+//    }
+//    private suspend fun buscarDatosCiuadad():Ciudad?{
+//        return withContext(Dispatchers.IO) {
+//            db.obtenerCiudad(nombre)
+//        }
+//    }
 }

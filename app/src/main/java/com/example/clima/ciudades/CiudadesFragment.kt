@@ -26,7 +26,7 @@ class CiudadesFragment : Fragment() {
         val dataBase= CiudadDatabase.getInstance(application).ciudadDatabaseDao
 
         //se crea el viewModel de ciudad
-        val viewModelFactory= CiudadViewModelFactory(dataBase, application)
+        val viewModelFactory= CiudadViewModelFactory(dataBase)
         val viewModel= ViewModelProvider(this,viewModelFactory).get(CiudadesViewModel::class.java)
 
         //se asigna el viewModel y lifecycle
