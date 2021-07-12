@@ -28,7 +28,7 @@ class NewCiudadViewModel(private val db: CiudadDatabaseDao): ViewModel() {
     }
     private suspend fun insertar(){
         withContext(Dispatchers.IO){
-            db.insertCiudad(Ciudad(nombre = "${editCiudad.value}"))
+            db.insertCiudad(Ciudad(name = "${editCiudad.value}"))
         }
     }
 

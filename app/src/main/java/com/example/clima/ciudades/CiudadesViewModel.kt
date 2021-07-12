@@ -26,7 +26,6 @@ class CiudadesViewModel(private val db: CiudadDatabaseDao): ViewModel() {
         get()=_cantCiudades
 
     init{
-
         _cantCiudades.value="Cantidad de Ciudades cargadas: ${allCiudades.value?.size}"
     }
 }

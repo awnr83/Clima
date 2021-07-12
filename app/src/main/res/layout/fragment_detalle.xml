@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:text="@{viewModel.weather.name}"
             android:textColor="#000000"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvAviso"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +32,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="54dp"
-            android:text="@{viewModel.weather.main.temp.toString()}"
+            android:text="@{viewModel.weather.temp.toString()}"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +43,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@{viewModel.weather.main.feels_like.toString()}"
+            android:text="@{viewModel.weather.feels_like.toString()}"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -55,7 +55,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@{viewModel.weather.main.temp_min.toString()}"
+            android:text="@{viewModel.weather.temp_min.toString()}"
             android:textColor="#000000"
             app:layout_constraintEnd_toStartOf="@+id/tvMax"
             app:layout_constraintHorizontal_bias="0.5"
@@ -66,7 +66,7 @@
             android:id="@+id/tvMax"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@{viewModel.weather.main.temp_max.toString()}"
+            android:text="@{viewModel.weather.temp_max.toString()}"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -78,7 +78,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:text="@{viewModel.weather.main.pressure.toString()}"
+            android:text="@{viewModel.weather.pressure.toString()}"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -90,11 +90,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:text="@{viewModel.weather.main.humidity.toString()}"
+            android:text="@{viewModel.weather.humidity.toString()}"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvPressure" />
+
+        <TextView
+            android:id="@+id/tvAviso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.weather.ultimaActualizacion.toString()}"
+            android:visibility="@{viewModel.aviso}"
+            android:textColor="#FF0000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
