@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">Clima</string>
-    <!--FC-->
-    <string name="tv_temp">Temperatura: %2f ºC</string>
+
+    <string name="temperatura">%.0f ºc</string>
+    <string name="precipitaciones">%d mm</string>
+    <string name="humedad">%d %%</string>
+
+    <!--FN-->
+    <string name="et_ciudad">Ingrese el nombre de una ciudad..</string>
+    <string name="bt_Agregar">Agregar Ciudad</string>
+
+    <!--FD-->
+    <string name="tv_S_temp">Temperatura Actual</string>
+    <string name="tv_S_temp_min">Temperatura Minima</string>
+    <string name="tv_S_temp_max">Temperatura Maxima</string>
+    <string name="tv_S_sensacion">Sensación Termica</string>
+    <string name="tv_S_presipitaciones">Precipitaciones</string>
+    <string name="tv_S_temp_humedad">Humedad</string>
 </resources>

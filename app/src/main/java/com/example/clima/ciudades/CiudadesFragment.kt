@@ -2,7 +2,6 @@ package com.example.clima.ciudades
 
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -36,13 +35,22 @@ class CiudadesFragment : Fragment() {
         //se carga el RecyclerView
         val adapter= CiudadAdapter(CiudadAdapter.CiudadListener {
             findNavController().navigate(CiudadesFragmentDirections.actionCiudadesFragmentToDetalleFragment(it))
+        },CiudadAdapter.CiudadEliminar{
+            viewModel.eliminarCiudad(it)
         })
         binding.listCiudades.adapter=adapter
 
-        //
+        //se carga recyclerView
         viewModel.allCiudades.observe(viewLifecycleOwner, Observer {
             it?.let{
                 adapter.submitList(it)
+            }
+        })
+
+        viewModel.navigate.observe(viewLifecycleOwner, Observer {
+            if(it){
+                findNavController().navigate(CiudadesFragmentDirections.actionCiudadesFragmentToNewCiudadFragment())
+                viewModel.onNavigate()
             }
         })
 
@@ -52,6 +60,7 @@ class CiudadesFragment : Fragment() {
         return binding.root
     }
 
+    //menu agregar ciudades
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.ciudad_menu,menu)
@@ -61,4 +70,5 @@ class CiudadesFragment : Fragment() {
         return NavigationUI.onNavDestinationSelected(item, view!!.findNavController())
                 || super.onOptionsItemSelected(item)
     }
+
 }

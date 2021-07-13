@@ -8,7 +8,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-private val url="https://api.openweathermap.org/data/2.5/"
+private const val url="https://api.openweathermap.org/data/2.5/"
 
 private val moshi= Moshi.Builder()
     .add(KotlinJsonAdapterFactory())

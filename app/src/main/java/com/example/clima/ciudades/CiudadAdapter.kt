@@ -8,11 +8,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.clima.database.Ciudad
 import com.example.clima.databinding.ListaCiudadesBinding
 
-class CiudadAdapter(val click:CiudadListener): ListAdapter<Ciudad,CiudadAdapter.ViewHolder>(CiudadCallback()) {
-    class ViewHolder private constructor(val binding: ListaCiudadesBinding): RecyclerView.ViewHolder(binding.root) {
-        fun bind(ciudad: Ciudad, click: CiudadListener) {
+class CiudadAdapter(private val click:CiudadListener, private var eliminar: CiudadEliminar): ListAdapter<Ciudad,CiudadAdapter.ViewHolder>(CiudadCallback()) {
+    class ViewHolder private constructor(private val binding: ListaCiudadesBinding): RecyclerView.ViewHolder(binding.root) {
+        fun bind(ciudad: Ciudad, click: CiudadListener, eliminar: CiudadEliminar) {
             binding.ciudad=ciudad
             binding.click=click
+            binding.delete=eliminar
             binding.executePendingBindings()
         }
         companion object{
@@ -22,6 +23,10 @@ class CiudadAdapter(val click:CiudadListener): ListAdapter<Ciudad,CiudadAdapter.
                 return ViewHolder(binding)
             }
         }
+    }
+
+    class CiudadEliminar(val clickEliminar: (ciudad: Ciudad)-> Unit) {
+        fun onEliminar(ciudad: Ciudad)= clickEliminar(ciudad)
     }
 
     class CiudadCallback:DiffUtil.ItemCallback<Ciudad>() {
@@ -42,6 +47,6 @@ class CiudadAdapter(val click:CiudadListener): ListAdapter<Ciudad,CiudadAdapter.
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(getItem(position), click)
+        holder.bind(getItem(position), click, eliminar)
     }
 }

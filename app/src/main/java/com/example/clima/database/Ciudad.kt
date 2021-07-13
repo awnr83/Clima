@@ -2,8 +2,7 @@ package com.example.clima.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.clima.network.Main
-import com.squareup.moshi.Json
+
 
 @Entity(tableName = "ciudad")
 data class Ciudad(

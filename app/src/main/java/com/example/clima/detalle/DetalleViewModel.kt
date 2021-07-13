@@ -51,6 +51,7 @@ class DetalleViewModel(private val nombre: String, val db: CiudadDatabaseDao): V
                 tiempo= CiudadApi
                     .retrofitService
                     .getWeather(nombre, "710b9a74fd5943aff012c7e3e83be945")
+                _notificacion.value=""
                 //conversiones
                 tiempo.main!!.temp= (tiempo.main!!.temp!! - 273.15)
                 tiempo.main!!.feels_like= (tiempo.main!!.feels_like!! - 273.15)
@@ -131,7 +132,7 @@ class DetalleViewModel(private val nombre: String, val db: CiudadDatabaseDao): V
     }
     private suspend fun delete(){
         withContext(Dispatchers.IO){
-            var aux=tiempoDB
+            val aux=tiempoDB
             db.eliminarCiudad(aux)
         }
     }
