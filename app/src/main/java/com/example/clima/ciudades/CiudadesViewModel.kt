@@ -12,12 +12,12 @@ import kotlinx.coroutines.Job
 
 class CiudadesViewModel(private val db: CiudadDatabaseDao): ViewModel() {
 
-    private val jobViewModel= Job()
-    private val uiScope= CoroutineScope(Dispatchers.Main + jobViewModel)
-    override fun onCleared() {
-        super.onCleared()
-        jobViewModel.cancel()
-    }
+//    private val jobViewModel= Job()
+//    private val uiScope= CoroutineScope(Dispatchers.Main + jobViewModel)
+//    override fun onCleared() {
+//        super.onCleared()
+//        jobViewModel.cancel()
+//    }
 
     val allCiudades= db.listarCiudades()
 
@@ -26,6 +26,6 @@ class CiudadesViewModel(private val db: CiudadDatabaseDao): ViewModel() {
         get()=_cantCiudades
 
     init{
-        _cantCiudades.value="Cantidad de Ciudades cargadas: ${allCiudades.value?.size}"
+        _cantCiudades.value="Ciudades cargadas: "
     }
 }

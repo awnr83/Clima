@@ -46,7 +46,6 @@ class CiudadesFragment : Fragment() {
             }
         })
 
-
         //agrega el menu para agregar ciudades
         setHasOptionsMenu(true)
 

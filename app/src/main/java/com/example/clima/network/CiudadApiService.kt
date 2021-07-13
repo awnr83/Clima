@@ -19,14 +19,8 @@ private val retrofit= Retrofit.Builder()
     .baseUrl(url)
     .build()
 
-//https://api.openweathermap.org/data/2.5/weather?q=London&appid=710b9a74fd5943aff012c7e3e83be945
+
 interface CiudadApiService{
-//    @GET(value= "weather?q=London&appid=710b9a74fd5943aff012c7e3e83be945")
-//    fun getTemp(): Call<Weather>
-
-    @GET(value= "weather?q=London&appid=710b9a74fd5943aff012c7e3e83be945")
-    suspend fun getTemp2(): Weather
-
     @GET("weather")
     suspend fun getWeather(
         @Query("q") cityName: String?,

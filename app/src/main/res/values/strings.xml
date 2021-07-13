@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Clima</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--FC-->
+    <string name="tv_temp">Temperatura: %2f ºC</string>
 </resources>
