@@ -8,7 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.clima.database.Ciudad
 import com.example.clima.databinding.ListaCiudadesBinding
 
-class CiudadAdapter(private val click:CiudadListener, private var eliminar: CiudadEliminar): ListAdapter<Ciudad,CiudadAdapter.ViewHolder>(CiudadCallback()) {
+class CiudadAdapter(private val click:CiudadListener,
+                    private var eliminar: CiudadEliminar): ListAdapter<Ciudad,CiudadAdapter.ViewHolder>
+    (CiudadCallback()) {
+
     class ViewHolder private constructor(private val binding: ListaCiudadesBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(ciudad: Ciudad, click: CiudadListener, eliminar: CiudadEliminar) {
             binding.ciudad=ciudad

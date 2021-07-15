@@ -16,57 +16,71 @@
         android:background="#80CBC4">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_margin="10dp"
             android:backgroundTint="#26A69A"
             app:cardCornerRadius="10dp"
             app:cardElevation="8dp"
             app:cardMaxElevation="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#4DB6AC"
-                android:layout_margin="15dp"
-                android:layout_weight="1"
-                android:padding="4dp"
-                android:orientation="vertical">
-
-                <EditText
-                    android:id="@+id/editTextTextPersonName"
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
-                    android:ems="10"
-                    android:hint="@string/et_ciudad"
-                    android:inputType="textPersonName"
-                    android:text="@={viewModel.editCiudad}"
-                    android:textColor="#000000" />
-
-                <TextView
-                    android:id="@+id/tvAvisos"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:ems="10"
-                    android:gravity="center"
-                    android:text="@{viewModel.aviso}"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    tools:text="ya existe asdsadsad asdsadasd asdd as d adasdas dsa d" />
+                android:layout_height="match_parent">
 
                 <Button
                     android:id="@+id/button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="76dp"
+                    android:layout_marginTop="96dp"
                     android:onClick="@{()->viewModel.buscarCiudad()}"
                     android:text="@string/bt_Agregar"
-                    android:textColor="#FFFFFF" />
-            </LinearLayout>
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="112dp"
+                    android:ems="10"
+                    android:hint="@string/et_ciudad"
+                    android:inputType="textPersonName"
+                    android:text="@={viewModel.editCiudad}"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAvisos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="@{viewModel.aviso}"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+                    tools:text="ya existe asdsadsad asdsadasd asdd as d adasdas dsa d" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

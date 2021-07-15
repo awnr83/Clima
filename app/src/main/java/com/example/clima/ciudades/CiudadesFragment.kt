@@ -1,24 +1,37 @@
 package com.example.clima.ciudades
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.clima.KEY_LATITUD
+import com.example.clima.KEY_LONGUITUD
 import com.example.clima.R
 import com.example.clima.database.CiudadDatabase
 import com.example.clima.databinding.FragmentCiudadesBinding
 
 class CiudadesFragment : Fragment() {
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val binding= FragmentCiudadesBinding.inflate(inflater)
+
+        Log.i("alfredo","parametros: $savedInstanceState")
+        if(savedInstanceState!=null){
+            var lat= savedInstanceState.getDouble(KEY_LATITUD)
+            var lon= savedInstanceState.getDouble(KEY_LONGUITUD)
+            Log.i("alfredo","latitud: $lat longitud: $lon")
+        }
 
         //instancia de la DB
         val application= requireNotNull(this.activity).application
@@ -51,6 +64,13 @@ class CiudadesFragment : Fragment() {
             if(it){
                 findNavController().navigate(CiudadesFragmentDirections.actionCiudadesFragmentToNewCiudadFragment())
                 viewModel.onNavigate()
+            }
+        })
+
+        viewModel.notificacion.observe(viewLifecycleOwner, Observer {
+            if(it){
+                //Toast.makeText(requireActivity(),viewModel.aviso, Toast.LENGTH_LONG).show()
+                viewModel.notificacionC()
             }
         })
 

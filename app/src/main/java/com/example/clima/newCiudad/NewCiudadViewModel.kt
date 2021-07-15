@@ -1,6 +1,7 @@
 package com.example.clima.newCiudad
 
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -9,6 +10,7 @@ import com.example.clima.database.Ciudad
 import com.example.clima.database.CiudadDatabaseDao
 import com.example.clima.network.CiudadApi
 import com.example.clima.network.Weather
+import com.example.clima.repository.RepositoryCiudad
 import kotlinx.coroutines.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -22,90 +24,63 @@ class NewCiudadViewModel(private val db: CiudadDatabaseDao): ViewModel() {
         jobViewModel.cancel()
     }
 
+    val repositorio= RepositoryCiudad(db)
+
     //se usa para dar avisos en pantalla
     private val _aviso= MutableLiveData<String>()
     val aviso: LiveData<String>
         get()=_aviso
+    //notificaciones igual a los avisos
+    private val _notificacion=MutableLiveData<Boolean>()
+    val notification: LiveData<Boolean>
+        get()= _notificacion
+    private fun onNotificacion(){
+        _notificacion.value=true
+    }
+    fun notificacionC(){
+        _notificacion.value=false
+    }
 
     var editCiudad= MutableLiveData<String>()
-    var nombreCiudad=String()
-    private var tiempoDB= Ciudad()
-    private var tiempo= Weather()
 
 //comprobacion de que el nombre no esta cargado
-    fun buscarCiudad(){
-        if(!editCiudad.value.isNullOrBlank()) {
-            nombreCiudad= editCiudad.value!!.toUpperCase()
-            uiScope.launch {
-                tiempoDB = buscarDatosCiudad()?:Ciudad()
-                //se comprueba si ya fue registrada
-                if(tiempoDB.name==null){
-                    //se busca en el webService y se maneja la DB
-                    obtenerCiudad()
-                }else{
-                    //si existe AVISA de que ya esta cargada
-                    _aviso.value= "La ciudad: \"${nombreCiudad}\" ya se encuentra cargada."
+    fun buscarCiudad() {
+        if(editCiudad.value!="") {
+            var nombre = editCiudad.value!!.toUpperCase()
+            var ciudad = Ciudad()
+            viewModelScope.launch {
+                ciudad = repositorio.buscarCiudadDb(nombre)
+                if (ciudad == null) { //no existe
+                    val ciudad = repositorio.buscarCiudadWeather(nombre)
+                    if (ciudad.name != null) {
+                        repositorio.agregarCiudad(ciudad)
+                        editCiudad.value = ""
+                        onNotificacion()
+                        _aviso.value = "La ciudad fue agregada existosamente."
+                    } else {
+                        onNotificacion()
+                        _aviso.value = "Verifique el nombre ingresado y su conexcion con internet."
+                    }
+                } else {
+                    onNotificacion()
+                    _aviso.value = "La ciudad ya se encuentra cargada."
                 }
             }
-        }else{
-            //AVISO de que no ingreso nada
-            _aviso.value= "Debe escribir el nombre de una ciudad..."
-        }
-    }
-    private suspend fun buscarDatosCiudad():Ciudad{
-        return withContext(Dispatchers.IO){
-            db.obtenerCiudad(nombreCiudad)
+        }else {
+            onNotificacion()
+            _aviso.value = "Debe ingresar el nombre de una ciudad para agregar al listado."
         }
     }
 
-//manejo de la DB - inserta la ciudad agregada
-    private fun agregarCiudad(){
-        if(!nombreCiudad.isNullOrEmpty()){
-            uiScope.launch {
-                insertar()
-                editCiudad.value=""
-            }
-        }
-    }
-    private suspend fun insertar(){
-        withContext(Dispatchers.IO){
-            db.insertCiudad(tiempoDB)
-        }
-    }
-
-//busca que retrofit devuelva un valor para la ciudad
-    private fun obtenerCiudad(){
+    private fun existeCiudadW(nombre: String):Ciudad {
+        var ciudad = Ciudad()
         viewModelScope.launch {
-            try{
-                val sdf = SimpleDateFormat("dd/M/yy HH:mm")
-                val currentDate = sdf.format(Date())
-
-                tiempo= CiudadApi.retrofitService.getWeather(nombreCiudad,"710b9a74fd5943aff012c7e3e83be945")
-                tiempoDB= Ciudad(
-                    name = nombreCiudad,
-                    temp= (tiempo.main!!.temp!! - 273.15),
-                    temp_min = (tiempo.main!!.temp_min!! - 273.15),
-                    temp_max = (tiempo.main!!.temp_max!! - 273.15),
-                    feels_like = (tiempo.main!!.feels_like!! - 273.15),
-                    pressure = tiempo.main!!.pressure,
-                    humidity = tiempo.main!!.humidity,
-                    ultimaActualizacion = currentDate.toString()
-                )
-                agregarCiudad()
-                _aviso.value="La ciudad \"${nombreCiudad}\" fue agregada con exito."
-            }catch (e: Exception){
-                if(e.message!="HTTP 404 Not Found") { // situacion sin internet
-                    //permite guardar la ciudad porque no tiene internet
-                    tiempoDB = Ciudad(name = nombreCiudad)
-                    agregarCiudad()
-
-                    //aviso de que guardo la ciudad sin comprobar si existe
-                    _aviso.value="NO tiene conexión con internet. Se guardo la ciudad: \"${nombreCiudad}\", sin poder verificar su existencia."
-                    editCiudad.value=""
-                }else{
-                    _aviso.value="La ciudad \"${nombreCiudad}\" NO existe, verifique el nombre por favor."
-                }
-            }
+            ciudad= repositorio.buscarCiudadWeather(nombre)?: return@launch
         }
+        return ciudad
     }
+
+     init {
+         _notificacion.value=false
+     }
 }
