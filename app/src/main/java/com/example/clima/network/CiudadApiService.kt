@@ -28,7 +28,8 @@ interface CiudadApiService{
     @GET("weather")
     suspend fun getWeather(
         @Query("q") cityName: String?,
-        @Query("appid") ApiToken: String?
+        @Query("appid") ApiToken: String?,
+        @Query("units") units: String?= "metric"
     ): Weather
 }
 

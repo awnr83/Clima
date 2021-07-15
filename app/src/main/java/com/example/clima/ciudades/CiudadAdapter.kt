@@ -41,8 +41,8 @@ class CiudadAdapter(private val click:CiudadListener,
         }
     }
 
-    class CiudadListener(val clickListener: (ciudadNombre: String)-> Unit) {
-        fun onClick(ciudad: Ciudad)= clickListener(ciudad.name!!)
+    class CiudadListener(val clickListener: (ciudad: Ciudad)-> Unit) {
+        fun onClick(ciudad: Ciudad)= clickListener(ciudad)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder  {

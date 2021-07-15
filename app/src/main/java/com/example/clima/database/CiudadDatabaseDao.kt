@@ -6,24 +6,32 @@ import androidx.room.*
 
 @Dao
 interface CiudadDatabaseDao {
-    @Insert
-    fun insertCiudad(ciudad: Ciudad)
 
+// devuelve Live Data
     @Query("select * from ciudad order by name asc")
-    fun listarCiudades(): LiveData <List<Ciudad>>
-
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun updateCiudades(ciudades: List<Ciudad>)
-
-    @Query("select * from ciudad order by name asc")
-    fun allCiudades(): List<Ciudad>
+    fun listarCiudadesLD(): LiveData <List<Ciudad>>
 
     @Query("select * from ciudad where name= :name")
-    fun obtenerCiudad(name:String): Ciudad
+    fun obtenerCiudadLD(name:String): LiveData<Ciudad>
+
+//DB--
+    @Query("select * from ciudad where name= :name")
+    fun obtenerCiudadDB(name:String): Ciudad
+
+    @Insert
+    fun insertCiudadDB(ciudad: Ciudad)
 
     @Update
-    fun actualizarCiudad(ciudad: Ciudad)
+    fun actualizarCiudadDB(ciudad: Ciudad)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun updateCiudadesDB(ciudades: List<Ciudad>)
 
     @Delete
-    fun eliminarCiudad(ciudad: Ciudad)
+    fun eliminarCiudadDB(ciudad: Ciudad)
+
+    @Query("select * from ciudad order by name asc")
+    fun allCiudadesDB(): List<Ciudad>
+
+    @Query("select count(*) from ciudad")
+    fun totalCiudades():LiveData<Int>
 }

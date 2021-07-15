@@ -20,12 +20,23 @@ class CiudadesViewModel(private val db: CiudadDatabaseDao): ViewModel() {
         jobViewModel.cancel()
     }
 
-    val repositorio=RepositoryCiudad(db)
-    var allCiudades =repositorio.ciudades
+    val repositorio = RepositoryCiudad(db)
+    val allCiudades = repositorio.ciudades
 
-    private val _cantCiudades= MutableLiveData<String>()
-    val cantCiudades:LiveData<String>
-        get()=_cantCiudades
+    val _cant = repositorio.obtnenerCantidaCiudades()
+
+    private val _title= MutableLiveData<String>()
+    val title: LiveData<String>
+        get()=_title
+
+    //actualizacion
+    val actualizo= MutableLiveData<Boolean>(false)
+    private fun onActuralizo(){
+        actualizo.value=true
+    }
+    fun actualizoC(){
+        actualizo.value=false
+    }
 
     //boton agregar -> navega
     private val _navigate= MutableLiveData<Boolean>()
@@ -38,42 +49,44 @@ class CiudadesViewModel(private val db: CiudadDatabaseDao): ViewModel() {
         _navigate.value=false
     }
 
-    //activacion -> mensaje
-    private val _aviso=MutableLiveData<String>()
-    val aviso: LiveData<String>
-        get()= _aviso
-    private val _notificacion= MutableLiveData<Boolean>()
-    val notificacion: LiveData<Boolean>
-        get()= _notificacion
-    private fun onNotificacion(){
-        _notificacion.value=true
+    //activacion -> mensaje eliminado
+    private val _eliminado= MutableLiveData<Boolean>()
+    val eliminado: LiveData<Boolean>
+        get()= _eliminado
+    private fun onEliminado(){
+        _eliminado.value=true
     }
-    fun notificacionC(){
-        _notificacion.value=false
-    }
-
-
-    fun actualizar(){
-        viewModelScope.launch {
-            //se muestran las temperaturas desde DB
-            repositorio.actualizarTemperatura()
-        }
+    fun eliminadoC(){
+        _eliminado.value=false
     }
 
     init {
+
+        _title.value="Cargando ciudades..."
+
         viewModelScope.launch {
             repositorio.actualizarTemperatura()
+            onActuralizo()
         }
 
-        _notificacion.value=false
+        _eliminado.value=false
         _navigate.value= false
-        _cantCiudades.value="Ciudades cargadas: "
     }
 
+    //Button permite actualizar las temperaturas desde DB
+    fun actualizar(){
+        Log.i("alfredo", _cant.value.toString())
+        viewModelScope.launch {
+            repositorio.actualizarTemperatura()
+            onActuralizo()
+        }
+    }
+
+    //Button permite eliminar una ciudad
     fun eliminarCiudad(ciudad: Ciudad){
         uiScope.launch {
            repositorio.eliminarCiudad(ciudad)
-           _notificacion.value=true
+           _eliminado.value=true
         }
     }
 }

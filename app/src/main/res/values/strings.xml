@@ -2,18 +2,53 @@
     <string name="app_name">Clima</string>
 
     <string name="temperatura">%.0f ºc</string>
-    <string name="precipitaciones">%d mm</string>
+    <string name="presion">%.3f mbar</string>
     <string name="humedad">%d %%</string>
+
+    <!--titles-->
+    <string name="fc_title">ClimaApp</string>
+    <string name="fn_title">ClimaApp: Agregar ciudad</string>
+    <string name="fd_title">ClimaApp: Detalle de ciudad</string>
+    <string name="fa_title">ClimaApp: Acerca de...</string>
+
+    <!--menu-->
+    <string name="menu_agregar">Agregar ciudad</string>
+    <string name="menu_correo">Enviar comentario</string>
+    <string name="menu_about">Acerca de...</string>
+    <string name="menu_compatir">Compartir</string>
+
+    <!--FC-->
+    <string name="fc_title_load">Cargando ciudades...</string>
+    <string name="fc_title_vacio">Sin ciudades cargadas...</string>
+    <string name="fc_title_ciudades">Lista de ciudades:</string>
+    <string name="fc_agregar">Agregar Ciudad</string>
 
     <!--FN-->
     <string name="et_ciudad">Ingrese el nombre de una ciudad..</string>
     <string name="bt_Agregar">Agregar Ciudad</string>
 
     <!--FD-->
-    <string name="tv_S_temp">Temperatura Actual</string>
-    <string name="tv_S_temp_min">Temperatura Minima</string>
-    <string name="tv_S_temp_max">Temperatura Maxima</string>
+    <string name="tv_S_temp">Temperatura \n Actual</string>
+    <string name="tv_S_temp_min">Temperatura \n Minima</string>
+    <string name="tv_S_temp_max">Temperatura \n Maxima</string>
     <string name="tv_S_sensacion">Sensación Termica</string>
-    <string name="tv_S_presipitaciones">Precipitaciones</string>
+    <string name="tv_S_presion">Presión</string>
     <string name="tv_S_temp_humedad">Humedad</string>
+
+    <!--Content-->
+    <string name="c_actualizar">Actualizar pronostico del tiempo</string>
+    <string name="c_actualizarListado">Actualizar Listado</string>
+
+    <!--mensajes-->
+    <string name="msg_eliminado">Ciudad Eliminada.</string>
+    <string name="msg_actualizo">Se actualizo el listado.</string>
+    <string name="msg_actualizoCiudad">Se actualizaron los datos de la ciudad.</string>
+
+    <!--about-->
+    <string name="about_inicio">ClimaApp: \nPara utilizar el servicio de clima, debe disponer de una conexión con internet. Para que se muestren los datos actualizados </string>
+    <string name="about_agregar">Agregar una ciudad: \nPara ver el clima de una ciudad debe escribir su nombre completo, sin ninguna abreviatura. ClimaApp se conecta con el servidor de clima y busca el nombre de esa ciudad, si no existe le avisa.</string>
+    <string name="about_eliminar">Eliminar una ciudad: \nPara eliminar una ciudad basta con tocar el basurero y se eliminara del listado.</string>
+    <string name="about_detalle">Detalle de una ciudad: \nPara obtener mas infromación de una ciudad del listado, solo tiene que seleccionarla y sera redirijido a la pantalla de detalle.</string>
+    <string name="about_actualizar">Actualización de datos: \nCada vez que inicia climaApp, se actualizan los datos del tiempo de todas las ciudades y al ver el detalle de una ciudad en particular tambien se actualiza. Ademas cuanta con el botón de actualización en el listado de ciudades y en el detalle de ciudad.</string>
+    <string name="about_cortecia">Datos obtenidos de weather.com</string>
 </resources>

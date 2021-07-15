@@ -30,6 +30,7 @@ class NewCiudadViewModel(private val db: CiudadDatabaseDao): ViewModel() {
     private val _aviso= MutableLiveData<String>()
     val aviso: LiveData<String>
         get()=_aviso
+
     //notificaciones igual a los avisos
     private val _notificacion=MutableLiveData<Boolean>()
     val notification: LiveData<Boolean>
@@ -45,7 +46,7 @@ class NewCiudadViewModel(private val db: CiudadDatabaseDao): ViewModel() {
 
 //comprobacion de que el nombre no esta cargado
     fun buscarCiudad() {
-        if(editCiudad.value!="") {
+        if(!editCiudad.value.isNullOrEmpty()) {
             var nombre = editCiudad.value!!.toUpperCase()
             var ciudad = Ciudad()
             viewModelScope.launch {
