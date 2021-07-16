@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.clima.ciudades.CiudadesViewModel" />
+            type="com.climaApp.clima.ciudades.CiudadesViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

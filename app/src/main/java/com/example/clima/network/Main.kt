@@ -1,6 +1,6 @@
-package com.example.clima.network
+package com.climaApp.clima.network
 
-import com.example.clima.database.Ciudad
+import com.climaApp.clima.database.Ciudad
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 

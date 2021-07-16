@@ -1,12 +1,12 @@
-package com.example.clima.ciudades
+package com.climaApp.clima.ciudades
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.clima.database.Ciudad
-import com.example.clima.databinding.ListaCiudadesBinding
+import com.climaApp.clima.database.Ciudad
+import com.climaApp.clima.databinding.ListaCiudadesBinding
 
 class CiudadAdapter(private val click:CiudadListener,
                     private var eliminar: CiudadEliminar): ListAdapter<Ciudad,CiudadAdapter.ViewHolder>

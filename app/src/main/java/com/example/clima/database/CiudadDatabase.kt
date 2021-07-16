@@ -1,4 +1,4 @@
-package com.example.clima.database
+package com.climaApp.clima.database
 
 import android.content.Context
 import androidx.room.Database

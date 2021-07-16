@@ -1,8 +1,8 @@
-package com.example.clima.ciudades
+package com.climaApp.clima.ciudades
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.clima.database.CiudadDatabaseDao
+import com.climaApp.clima.database.CiudadDatabaseDao
 import java.lang.IllegalArgumentException
 
 class CiudadViewModelFactory(private val db: CiudadDatabaseDao):ViewModelProvider.Factory {

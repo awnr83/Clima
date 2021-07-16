@@ -1,8 +1,8 @@
-package com.example.clima
+package com.climaApp.clima
 
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
-import com.example.clima.convertirDoubleToTemperatura
+import com.climaApp.clima.convertirDoubleToTemperatura
 
 @BindingAdapter("doubleTemperatura")
 fun TextView.setdoubleTemperatura(temp: Double?){

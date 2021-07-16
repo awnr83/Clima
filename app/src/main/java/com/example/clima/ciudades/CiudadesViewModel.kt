@@ -1,13 +1,13 @@
-package com.example.clima.ciudades
+package com.climaApp.clima.ciudades
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.clima.database.Ciudad
-import com.example.clima.database.CiudadDatabaseDao
-import com.example.clima.repository.RepositoryCiudad
+import com.climaApp.clima.database.Ciudad
+import com.climaApp.clima.database.CiudadDatabaseDao
+import com.climaApp.clima.repository.RepositoryCiudad
 import kotlinx.coroutines.*
 
 

@@ -1,12 +1,12 @@
-package com.example.clima.repository
+package com.climaApp.clima.repository
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.clima.database.Ciudad
-import com.example.clima.database.CiudadDatabaseDao
-import com.example.clima.network.CiudadApi
-import com.example.clima.network.Weather
+import com.climaApp.clima.database.Ciudad
+import com.climaApp.clima.database.CiudadDatabaseDao
+import com.climaApp.clima.network.CiudadApi
+import com.climaApp.clima.network.Weather
 import kotlinx.coroutines.*
 import java.text.SimpleDateFormat
 import java.util.*

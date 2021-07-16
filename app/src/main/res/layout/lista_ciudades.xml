@@ -6,13 +6,13 @@
     <data>
         <variable
             name="ciudad"
-            type="com.example.clima.database.Ciudad" />
+            type="com.climaApp.clima.database.Ciudad" />
         <variable
             name="click"
-            type="com.example.clima.ciudades.CiudadAdapter.CiudadListener" />
+            type="com.climaApp.clima.ciudades.CiudadAdapter.CiudadListener" />
         <variable
             name="delete"
-            type="com.example.clima.ciudades.CiudadAdapter.CiudadEliminar" />
+            type="com.climaApp.clima.ciudades.CiudadAdapter.CiudadEliminar" />
     </data>
 
     <androidx.cardview.widget.CardView

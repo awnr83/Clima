@@ -1,9 +1,9 @@
-package com.example.clima.newCiudad
+package com.climaApp.clima.newCiudad
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.clima.database.CiudadDatabase
-import com.example.clima.database.CiudadDatabaseDao
+import com.climaApp.clima.database.CiudadDatabase
+import com.climaApp.clima.database.CiudadDatabaseDao
 
 class NewCiudadViewModelFactory(private val db: CiudadDatabaseDao):ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

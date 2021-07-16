@@ -1,4 +1,4 @@
-package com.example.clima.detalle
+package com.climaApp.clima.detalle
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,9 +10,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.example.clima.R
-import com.example.clima.database.CiudadDatabase
-import com.example.clima.databinding.FragmentDetalleBinding
+import com.climaApp.clima.R
+import com.climaApp.clima.database.CiudadDatabase
+import com.climaApp.clima.databinding.FragmentDetalleBinding
 
 class DetalleFragment : Fragment() {
     override fun onCreateView(

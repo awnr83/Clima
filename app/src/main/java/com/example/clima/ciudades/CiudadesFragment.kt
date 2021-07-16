@@ -1,4 +1,4 @@
-package com.example.clima.ciudades
+package com.climaApp.clima.ciudades
 
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -15,9 +15,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.example.clima.R
-import com.example.clima.database.CiudadDatabase
-import com.example.clima.databinding.FragmentCiudadesBinding
+import com.climaApp.clima.R
+import com.climaApp.clima.database.CiudadDatabase
+import com.climaApp.clima.databinding.FragmentCiudadesBinding
 
 class CiudadesFragment : Fragment() {
 

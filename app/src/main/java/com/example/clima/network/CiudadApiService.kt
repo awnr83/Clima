@@ -1,4 +1,4 @@
-package com.example.clima.network
+package com.climaApp.clima.network
 
 
 import androidx.lifecycle.LiveData

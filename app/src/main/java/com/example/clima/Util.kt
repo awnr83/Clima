@@ -1,4 +1,4 @@
-package com.example.clima
+package com.climaApp.clima
 
 import android.content.res.Resources
 

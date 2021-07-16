@@ -1,4 +1,4 @@
-package com.example.clima.newCiudad
+package com.climaApp.clima.newCiudad
 
 import android.content.Context
 import android.os.Bundle
@@ -12,9 +12,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.clima.R
-import com.example.clima.database.CiudadDatabase
-import com.example.clima.databinding.FragmentNewCiudadBinding
+import com.climaApp.clima.R
+import com.climaApp.clima.database.CiudadDatabase
+import com.climaApp.clima.databinding.FragmentNewCiudadBinding
 
 
 class NewCiudadFragment : Fragment() {

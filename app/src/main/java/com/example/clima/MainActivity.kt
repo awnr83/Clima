@@ -1,4 +1,4 @@
-package com.example.clima
+package com.climaApp.clima
 
 import android.Manifest
 import android.content.Context
@@ -17,8 +17,8 @@ import androidx.core.app.ActivityCompat
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.FragmentNavigator
 import androidx.navigation.ui.NavigationUI
-import com.example.clima.ciudades.CiudadesFragment
-import com.example.clima.databinding.FragmentCiudadesBinding
+import com.climaApp.clima.ciudades.CiudadesFragment
+import com.climaApp.clima.databinding.FragmentCiudadesBinding
 
 class MainActivity : AppCompatActivity() {
    override fun onCreate(savedInstanceState: Bundle?) {

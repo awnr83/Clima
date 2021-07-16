@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/ciudadesFragment"
-        android:name="com.example.clima.ciudades.CiudadesFragment"
+        android:name="com.climaApp.clima.ciudades.CiudadesFragment"
         android:label="@string/fc_title"
         tools:layout="@layout/fragment_ciudades">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/newCiudadFragment"
-        android:name="com.example.clima.newCiudad.NewCiudadFragment"
+        android:name="com.climaApp.clima.newCiudad.NewCiudadFragment"
         android:label="@string/fn_title"
         tools:layout="@layout/fragment_new_ciudad">
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/detalleFragment"
-        android:name="com.example.clima.detalle.DetalleFragment"
+        android:name="com.climaApp.clima.detalle.DetalleFragment"
         android:label="@string/fd_title"
         tools:layout="@layout/fragment_detalle">
         <action
@@ -36,11 +36,11 @@
             app:destination="@id/ciudadesFragment" />
         <argument
             android:name="ciudad"
-            app:argType="com.example.clima.database.Ciudad" />
+            app:argType="com.climaApp.clima.database.Ciudad" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.example.clima.about.AboutFragment"
+        android:name="com.climaApp.clima.about.AboutFragment"
         android:label="@string/fa_title"
         tools:layout="@layout/fragment_about" />
 </navigation>
